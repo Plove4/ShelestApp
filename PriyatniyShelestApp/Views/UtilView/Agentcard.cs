@@ -20,6 +20,7 @@ namespace PriyatniyShelestApp.Views.UtilView
 
         public void GeneradDataAgentcard (Agent agent)
         {
+            IDAgentLabl.Text = agent.ID.ToString();
             AgentpictureBox.ImageLocation = agent.Logo;
             AgentTypeAndName.Text = $"{agent.AgentType.Title} | {agent.Title}";
             AgentSales.Text = $"{agent.Sales} продаж за год";

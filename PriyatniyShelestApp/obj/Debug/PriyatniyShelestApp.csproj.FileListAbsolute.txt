@@ -16,3 +16,4 @@ C:\Users\315\Desktop\Мамичев Шелест\PriyatniyShelestApp\PriyatniySh
 C:\Users\315\Desktop\Мамичев Шелест\PriyatniyShelestApp\PriyatniyShelestApp\obj\Debug\PriyatniyShelestApp.csproj.CopyComplete
 C:\Users\315\Desktop\Мамичев Шелест\PriyatniyShelestApp\PriyatniyShelestApp\obj\Debug\PriyatniyShelestApp.exe
 C:\Users\315\Desktop\Мамичев Шелест\PriyatniyShelestApp\PriyatniyShelestApp\obj\Debug\PriyatniyShelestApp.pdb
+C:\Users\315\Desktop\Мамичев Шелест\PriyatniyShelestApp\PriyatniyShelestApp\obj\Debug\PriyatniyShelestApp.Views.AddEditAgentForm.resources

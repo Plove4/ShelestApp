@@ -1,5 +1,6 @@
 ﻿using PriyatniyShelestApp.Models;
 using PriyatniyShelestApp.Utilities;
+using PriyatniyShelestApp.Views;
 using PriyatniyShelestApp.Views.UtilView;
 using System;
 using System.Collections.Generic;
@@ -39,6 +40,19 @@ namespace PriyatniyShelestApp
                 Agentcard card = new Agentcard();
                 card.GeneradDataAgentcard(item);
                 flowLayoutPanel1.Controls.Add(card);
+
+                card.DoubleClick += Card_DoubleClick;
+            }
+        }
+
+        private void Card_DoubleClick(object sender, EventArgs e)
+        {
+            Agentcard card = sender as Agentcard;
+            AddEditAgentForm form = new AddEditAgentForm(DBContex.Context.Agent.First(p => p.ID.ToString() == card.IDAgentLabl.Text));
+            DialogResult result = form.ShowDialog();
+            if(result == DialogResult.OK)
+            {
+                SortingAgentCards();
             }
         }
 
@@ -98,6 +112,16 @@ namespace PriyatniyShelestApp
         {
             if (SortcomboBox.SelectedIndex > 0)
                 SortingAgentCards();
+        }
+
+        private void AddBtn_Click(object sender, EventArgs e)
+        {
+            AddEditAgentForm form = new AddEditAgentForm(null);
+            DialogResult result = form.ShowDialog();
+            if(result == DialogResult.OK)
+            {
+                SortingAgentCards();
+            }
         }
     }
 }

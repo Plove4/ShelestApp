@@ -34,6 +34,7 @@
             this.AgentPhone = new System.Windows.Forms.Label();
             this.AgentPriority = new System.Windows.Forms.Label();
             this.AgentDiscount = new System.Windows.Forms.Label();
+            this.IDAgentLabl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.AgentpictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,12 +98,24 @@
             this.AgentDiscount.TabIndex = 5;
             this.AgentDiscount.Text = "label1";
             // 
+            // IDAgentLabl
+            // 
+            this.IDAgentLabl.AutoSize = true;
+            this.IDAgentLabl.Font = new System.Drawing.Font("Monotype Corsiva", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.IDAgentLabl.Location = new System.Drawing.Point(865, 178);
+            this.IDAgentLabl.Name = "IDAgentLabl";
+            this.IDAgentLabl.Size = new System.Drawing.Size(63, 28);
+            this.IDAgentLabl.TabIndex = 6;
+            this.IDAgentLabl.Text = "label1";
+            this.IDAgentLabl.Visible = false;
+            // 
             // Agentcard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.IDAgentLabl);
             this.Controls.Add(this.AgentDiscount);
             this.Controls.Add(this.AgentPriority);
             this.Controls.Add(this.AgentPhone);
@@ -125,5 +138,6 @@
         private System.Windows.Forms.Label AgentPhone;
         private System.Windows.Forms.Label AgentPriority;
         private System.Windows.Forms.Label AgentDiscount;
+        public System.Windows.Forms.Label IDAgentLabl;
     }
 }

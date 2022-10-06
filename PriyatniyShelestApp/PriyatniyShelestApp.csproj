@@ -70,6 +70,12 @@
     <Compile Include="Models\Shop.cs" />
     <Compile Include="Models\Supplier.cs" />
     <Compile Include="Utilities\DBContex.cs" />
+    <Compile Include="Views\AddEditAgentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddEditAgentForm.Designer.cs">
+      <DependentUpon>AddEditAgentForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,9 @@
     <Compile Include="Views\UtilView\Agentcard.Designer.cs">
       <DependentUpon>Agentcard.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\AddEditAgentForm.resx">
+      <DependentUpon>AddEditAgentForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -101,6 +110,19 @@
       <DependentUpon>Agentcard.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\PriyatniyShelestApp.Models.Agent.datasource" />
+    <None Include="Properties\DataSources\PriyatniyShelestApp.Models.AgentPriorityHistory.datasource" />
+    <None Include="Properties\DataSources\PriyatniyShelestApp.Models.AgentType.datasource" />
+    <None Include="Properties\DataSources\PriyatniyShelestApp.Models.Material.datasource" />
+    <None Include="Properties\DataSources\PriyatniyShelestApp.Models.MaterialCountHistory.datasource" />
+    <None Include="Properties\DataSources\PriyatniyShelestApp.Models.MaterialType.datasource" />
+    <None Include="Properties\DataSources\PriyatniyShelestApp.Models.Product.datasource" />
+    <None Include="Properties\DataSources\PriyatniyShelestApp.Models.ProductCostHistory.datasource" />
+    <None Include="Properties\DataSources\PriyatniyShelestApp.Models.ProductMaterial.datasource" />
+    <None Include="Properties\DataSources\PriyatniyShelestApp.Models.ProductSale.datasource" />
+    <None Include="Properties\DataSources\PriyatniyShelestApp.Models.ProductType.datasource" />
+    <None Include="Properties\DataSources\PriyatniyShelestApp.Models.Shop.datasource" />
+    <None Include="Properties\DataSources\PriyatniyShelestApp.Models.Supplier.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

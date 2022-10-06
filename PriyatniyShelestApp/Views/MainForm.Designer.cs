@@ -29,17 +29,19 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.LogopictureBox = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.checkBox = new System.Windows.Forms.CheckBox();
+            this.SortcomboBox = new System.Windows.Forms.ComboBox();
             this.SearchtextBox = new System.Windows.Forms.TextBox();
             this.FiltrcomboBox = new System.Windows.Forms.ComboBox();
-            this.SortcomboBox = new System.Windows.Forms.ComboBox();
-            this.checkBox = new System.Windows.Forms.CheckBox();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.AddBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogopictureBox)).BeginInit();
             this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -53,25 +55,6 @@
             this.panel1.Size = new System.Drawing.Size(1060, 62);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(215)))), ((int)(((byte)(255)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 480);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1060, 47);
-            this.panel2.TabIndex = 1;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 62);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1060, 418);
-            this.flowLayoutPanel1.TabIndex = 2;
-            // 
             // LogopictureBox
             // 
             this.LogopictureBox.Image = global::PriyatniyShelestApp.Properties.Resources.Приятный_шелест1;
@@ -81,6 +64,46 @@
             this.LogopictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.LogopictureBox.TabIndex = 0;
             this.LogopictureBox.TabStop = false;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.checkBox);
+            this.panel3.Controls.Add(this.SortcomboBox);
+            this.panel3.Controls.Add(this.SearchtextBox);
+            this.panel3.Controls.Add(this.FiltrcomboBox);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(122, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(938, 62);
+            this.panel3.TabIndex = 5;
+            // 
+            // checkBox
+            // 
+            this.checkBox.AutoSize = true;
+            this.checkBox.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBox.Location = new System.Drawing.Point(789, 21);
+            this.checkBox.Name = "checkBox";
+            this.checkBox.Size = new System.Drawing.Size(149, 26);
+            this.checkBox.TabIndex = 4;
+            this.checkBox.Text = "По возрастанию";
+            this.checkBox.UseVisualStyleBackColor = true;
+            this.checkBox.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
+            // 
+            // SortcomboBox
+            // 
+            this.SortcomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SortcomboBox.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SortcomboBox.FormattingEnabled = true;
+            this.SortcomboBox.Items.AddRange(new object[] {
+            "Без сортировки",
+            "Наименование",
+            "Размер скидки",
+            "Приоритет агента"});
+            this.SortcomboBox.Location = new System.Drawing.Point(628, 19);
+            this.SortcomboBox.Name = "SortcomboBox";
+            this.SortcomboBox.Size = new System.Drawing.Size(155, 30);
+            this.SortcomboBox.TabIndex = 3;
+            this.SortcomboBox.SelectedIndexChanged += new System.EventHandler(this.SortcomboBox_SelectedIndexChanged);
             // 
             // SearchtextBox
             // 
@@ -102,45 +125,35 @@
             this.FiltrcomboBox.TabIndex = 2;
             this.FiltrcomboBox.SelectedIndexChanged += new System.EventHandler(this.FiltrcomboBox_SelectedIndexChanged);
             // 
-            // SortcomboBox
+            // panel2
             // 
-            this.SortcomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.SortcomboBox.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SortcomboBox.FormattingEnabled = true;
-            this.SortcomboBox.Items.AddRange(new object[] {
-            "Без сортировки",
-            "Наименование",
-            "Размер скидки",
-            "Приоритет агента"});
-            this.SortcomboBox.Location = new System.Drawing.Point(628, 19);
-            this.SortcomboBox.Name = "SortcomboBox";
-            this.SortcomboBox.Size = new System.Drawing.Size(155, 30);
-            this.SortcomboBox.TabIndex = 3;
-            this.SortcomboBox.SelectedIndexChanged += new System.EventHandler(this.SortcomboBox_SelectedIndexChanged);
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(215)))), ((int)(((byte)(255)))));
+            this.panel2.Controls.Add(this.AddBtn);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 480);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1060, 47);
+            this.panel2.TabIndex = 1;
             // 
-            // checkBox
+            // flowLayoutPanel1
             // 
-            this.checkBox.AutoSize = true;
-            this.checkBox.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox.Location = new System.Drawing.Point(789, 21);
-            this.checkBox.Name = "checkBox";
-            this.checkBox.Size = new System.Drawing.Size(149, 26);
-            this.checkBox.TabIndex = 4;
-            this.checkBox.Text = "По возрастанию";
-            this.checkBox.UseVisualStyleBackColor = true;
-            this.checkBox.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 62);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1060, 418);
+            this.flowLayoutPanel1.TabIndex = 2;
             // 
-            // panel3
+            // AddBtn
             // 
-            this.panel3.Controls.Add(this.checkBox);
-            this.panel3.Controls.Add(this.SortcomboBox);
-            this.panel3.Controls.Add(this.SearchtextBox);
-            this.panel3.Controls.Add(this.FiltrcomboBox);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(122, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(938, 62);
-            this.panel3.TabIndex = 5;
+            this.AddBtn.Location = new System.Drawing.Point(12, 8);
+            this.AddBtn.Name = "AddBtn";
+            this.AddBtn.Size = new System.Drawing.Size(112, 27);
+            this.AddBtn.TabIndex = 26;
+            this.AddBtn.Text = "Добавить";
+            this.AddBtn.UseVisualStyleBackColor = true;
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // MainForm
             // 
@@ -157,6 +170,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.LogopictureBox)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -172,6 +186,7 @@
         private System.Windows.Forms.TextBox SearchtextBox;
         private System.Windows.Forms.PictureBox LogopictureBox;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button AddBtn;
     }
 }
 
